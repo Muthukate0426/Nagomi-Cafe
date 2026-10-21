@@ -1,295 +1,279 @@
 
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Nagomi Café | A Peaceful Moment</title>
-    <meta name="description" content="Welcome to Nagomi Café, a peaceful Japanese-inspired café for coffee, tea, and seasonal sweets.">
+    <title>Nagomi Café | なごみカフェ</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600&display=swap"
+        rel="stylesheet">
 </head>
 
 <body>
 
     <!-- Header -->
-    <header class="header">
-        <div class="container nav-container">
-            <a href="index.html" class="logo">Nagomi Café</a>
 
-            <nav class="nav">
-                <a href="index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="access.html">Access</a>
-                <a href="contact.html">Contact</a>
-            </nav>
-        </div>
+    <header>
+        <nav>
+            <a href="index.html" class="logo">
+                Nagomi Café
+            </a>
+
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+                <li><a href="access.html">Access</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
     </header>
 
-    <main>
 
-        <!-- Hero -->
-        <section class="hero">
-            <div class="hero-content">
-                <p class="eyebrow">WELCOME TO NAGOMI CAFÉ</p>
+    <!-- Hero -->
 
-                <h1>なごみカフェ</h1>
+    <section class="hero">
 
-                <h2>心ほどける、<br>やさしい時間。</h2>
+        <div class="hero-content">
 
-                <p class="hero-description">
-                    A peaceful moment, made just for you.
-                </p>
+            <p class="hero-subtitle">
+                ようこそ、なごみカフェへ
+            </p>
 
-                <a href="menu.html" class="btn">Explore Our Menu</a>
-            </div>
-        </section>
+            <h1>
+                心ほどける、<br>
+                やさしい時間。
+            </h1>
 
-        <!-- Welcome -->
-        <section class="welcome section">
-            <div class="container welcome-grid">
+            <p class="hero-text">
+                A peaceful moment, made just for you.
+            </p>
 
-                <div class="welcome-image">
-                    <img
-                        src="cafe-concept.jpg"
-                        alt="A peaceful moment at Nagomi Café"
-                        loading="lazy"
-                    >
-                </div>
+            <a href="menu.html" class="hero-button">
+                Explore Our Menu
+            </a>
 
-                <div class="welcome-content">
-                    <p class="eyebrow">WELCOME</p>
+        </div>
 
-                    <h2>Welcome to Nagomi Café</h2>
+    </section>
 
-                    <p>
-                        A quiet place where you can slow down,
-                        enjoy a warm cup of coffee, and spend a
-                        peaceful moment away from the busy city.
-                    </p>
 
-                    <a href="about.html" class="text-link">
-                        Discover Our Story →
-                    </a>
-                </div>
+    <!-- Introduction -->
 
-            </div>
-        </section>
+    <section class="intro">
 
-        <!-- Concept -->
-        <section class="concept section">
-            <div class="container concept-content">
-                <p class="eyebrow">OUR CONCEPT</p>
+        <p class="section-label">WELCOME</p>
 
-                <h2>A Moment of Calm</h2>
+        <h2>Welcome to Nagomi Café</h2>
 
-                <p>
-                    At Nagomi Café, we believe that even a small
-                    moment of peace can make your day brighter.
-                </p>
+        <p>
+            A little place to slow down, enjoy a cup of coffee,
+            and find a peaceful moment in your day.
+        </p>
 
-                <p>
-                    Surrounded by natural textures, gentle light,
-                    and the comforting aroma of freshly brewed
-                    coffee, our café is a place to slow down and
-                    simply enjoy the moment.
-                </p>
+        <p>
+            なごみカフェで、心安らぐひとときをお過ごしください。
+        </p>
 
-                <a href="about.html" class="text-link">
-                    Discover Our Story →
-                </a>
-            </div>
-        </section>
+    </section>
 
-        <!-- Popular Menu -->
-        <section class="menu-section section">
-            <div class="container">
 
-                <div class="section-heading">
-                    <p class="eyebrow">OUR MENU</p>
-                    <h2>Made with Care</h2>
+    <!-- Our Concept -->
 
-                    <p>
-                        Enjoy our carefully selected drinks and
-                        sweets, prepared with simple ingredients
-                        and a little love.
-                    </p>
-                </div>
+    <section class="concept">
 
-                <div class="menu-grid">
+        <div class="concept-image">
+            <img src="images/cafe-concept.jpg"
+                 alt="A peaceful and natural café atmosphere">
+        </div>
 
-                    <article class="menu-card">
-                        <img
-                            src="cappuccino.jpg"
-                            alt="Freshly prepared cappuccino"
-                            loading="lazy"
-                        >
+        <div class="concept-content">
 
-                        <div class="menu-card-content">
-                            <p class="eyebrow">COFFEE</p>
-                            <h3>Nagomi Blend</h3>
+            <p class="section-label">OUR CONCEPT</p>
 
-                            <p>
-                                A smooth and comforting coffee
-                                made with carefully selected beans.
-                            </p>
-
-                            <p class="price">¥550</p>
-                        </div>
-                    </article>
-
-                    <article class="menu-card">
-                        <img
-                            src="green-tea.jpg"
-                            alt="Japanese green tea"
-                            loading="lazy"
-                        >
-
-                        <div class="menu-card-content">
-                            <p class="eyebrow">TEA</p>
-                            <h3>Japanese Green Tea</h3>
-
-                            <p>
-                                A gentle and refreshing tea for
-                                a peaceful afternoon.
-                            </p>
-
-                            <p class="price">¥480</p>
-                        </div>
-                    </article>
-
-                    <article class="menu-card">
-                        <img
-                            src="seasonal-dessert.jpg"
-                            alt="Seasonal café dessert"
-                            loading="lazy"
-                        >
-
-                        <div class="menu-card-content">
-                            <p class="eyebrow">DESSERT</p>
-                            <h3>Seasonal Sweets</h3>
-
-                            <p>
-                                Homemade sweets made with
-                                seasonal Japanese ingredients.
-                            </p>
-
-                            <p class="price">¥680</p>
-                        </div>
-                    </article>
-
-                </div>
-
-                <div class="center-button">
-                    <a href="menu.html" class="btn">
-                        View Full Menu
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Gallery -->
-        <section class="gallery-section section">
-            <div class="container">
-
-                <div class="section-heading">
-                    <p class="eyebrow">GALLERY</p>
-                    <h2>Moments at Nagomi</h2>
-
-                    <p>
-                        Take a glimpse into our peaceful little café.
-                    </p>
-                </div>
-
-                <div class="gallery-grid">
-                    <img
-                        src="cafe-mocha.jpg"
-                        alt="A mocha coffee at Nagomi Café"
-                        loading="lazy"
-                    >
-
-                    <img
-                        src="iced-tea.jpg"
-                        alt="Refreshing iced tea"
-                        loading="lazy"
-                    >
-
-                    <img
-                        src="homemade-cake.jpg"
-                        alt="Homemade café cake"
-                        loading="lazy"
-                    >
-
-                    <img
-                        src="sandwich.jpg"
-                        alt="Freshly prepared sandwich"
-                        loading="lazy"
-                    >
-
-                    <img
-                        src="soup.jpg"
-                        alt="A warm bowl of soup"
-                        loading="lazy"
-                    >
-                </div>
-
-                <div class="center-button">
-                    <a href="gallery.html" class="btn">
-                        View Full Gallery
-                    </a>
-                </div>
-
-            </div>
-        </section>
-
-        <!-- Visit Us -->
-        <section class="visit-section section">
-            <div class="container visit-content">
-                <p class="eyebrow">YOUR MOMENT OF PEACE</p>
-
-                <h2>Take a Little Time for Yourself</h2>
-
-                <p>
-                    A warm drink, a quiet place, and a moment
-                    to breathe. We look forward to welcoming you.
-                </p>
-
-                <a href="access.html" class="btn">
-                    Visit Our Café
-                </a>
-            </div>
-        </section>
-
-    </main>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container footer-content">
-            <a href="index.html" class="footer-logo">Nagomi Café</a>
+            <h2>
+                A little peace<br>
+                in everyday life.
+            </h2>
 
             <p>
-                心ほどける、やさしい時間。
+                Nagomi means harmony and peacefulness.
+                Our café is designed to offer a warm,
+                relaxing atmosphere where you can take
+                a break from your busy day.
             </p>
 
-            <div class="footer-links">
-                <a href="about.html">About</a>
-                <a href="menu.html">Menu</a>
-                <a href="gallery.html">Gallery</a>
-                <a href="access.html">Access</a>
-                <a href="contact.html">Contact</a>
+            <p>
+                Enjoy carefully prepared drinks,
+                a gentle atmosphere, and simple moments
+                that make you feel at home.
+            </p>
+
+            <a href="about.html" class="concept-button">
+                Discover Our Story
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- Popular Menu -->
+
+    <section class="menu-preview">
+
+        <p class="section-label">OUR MENU</p>
+
+        <h2>Popular Menu</h2>
+
+        <p class="menu-intro">
+            Simple pleasures, made for your special moments.
+        </p>
+
+        <div class="menu-cards">
+
+            <article class="menu-card">
+
+                <div class="menu-card-image">
+                    <img src="images/cafe-latte.jpg"
+                         alt="A warm café latte">
+                </div>
+
+                <div class="menu-card-content">
+                    <p class="menu-category">COFFEE</p>
+                    <h3>Café Latte</h3>
+                    <p>
+                        Smooth espresso with gently steamed milk.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="menu-card">
+
+                <div class="menu-card-image">
+                    <img src="images/cafe-mocha.jpg"
+                         alt="A delicious café mocha">
+                </div>
+
+                <div class="menu-card-content">
+                    <p class="menu-category">SPECIALTY COFFEE</p>
+                    <h3>Café Mocha</h3>
+                    <p>
+                        A comforting blend of coffee and chocolate.
+                    </p>
+                </div>
+
+            </article>
+
+
+            <article class="menu-card">
+
+                <div class="menu-card-image">
+                    <img src="images/iced-tea.jpg"
+                         alt="Refreshing iced tea">
+                </div>
+
+                <div class="menu-card-content">
+                    <p class="menu-category">TEA</p>
+                    <h3>Iced Tea</h3>
+                    <p>
+                        A refreshing drink for a peaceful break.
+                    </p>
+                </div>
+
+            </article>
+
+        </div>
+
+        <a href="menu.html" class="menu-button">
+            View Full Menu
+        </a>
+
+    </section>
+
+
+    <!-- Gallery Preview -->
+
+    <section class="gallery-preview">
+
+        <p class="section-label">OUR SPACE</p>
+
+        <h2>A Glimpse of Nagomi</h2>
+
+        <p class="gallery-intro">
+            Discover the little details that make
+            Nagomi Café a peaceful place to visit.
+        </p>
+
+        <div class="gallery-grid">
+
+            <div class="gallery-item gallery-large">
+                <img src="images/cafe-interior.jpg"
+                     alt="The café interior">
             </div>
 
-            <p class="copyright">
-                © 2026 Nagomi Café. All Rights Reserved.
-            </p>
+            <div class="gallery-item">
+                <img src="images/cafe-menu.jpg"
+                     alt="Café drinks and menu">
+            </div>
+
+            <div class="gallery-item gallery-wide">
+                <img src="images/cafe-concept.jpg"
+                     alt="Natural café design">
+            </div>
+
         </div>
+
+        <a href="gallery.html" class="gallery-button">
+            Explore Our Gallery
+        </a>
+
+    </section>
+
+
+    <!-- Visit Us -->
+
+    <section class="visit-section">
+
+        <p class="section-label">VISIT US</p>
+
+        <h2>
+            Take a moment<br>
+            just for yourself.
+        </h2>
+
+        <p>
+            We look forward to welcoming you.
+        </p>
+
+        <a href="access.html" class="visit-button">
+            Find Us
+        </a>
+
+    </section>
+
+
+    <!-- Footer -->
+
+    <footer>
+        <p>Nagomi Café | なごみカフェ</p>
+        <p>心ほどける、やさしい時間。</p>
+        <p>© 2026 Nagomi Café. All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+
+    <script src="js/script.js"></script>
 
 </body>
 </html>
