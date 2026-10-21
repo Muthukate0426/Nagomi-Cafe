@@ -3319,3 +3319,143 @@ footer {
 }
 
 
+/* ABOUT US - OUR STORY COLOR DESIGN */
+.about-hero {
+    background: #f7f2e8;
+    border-top: 1px solid #e8e0d3;
+    border-bottom: 1px solid #e8e0d3;
+    padding: 75px 25px;
+    text-align: center;
+}
+
+.about-hero h1 {
+    color: #496653;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    letter-spacing: 1px;
+}
+
+.about-hero p {
+    color: #718875;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+
+/* ABOUT PAGE - OUR STORY HERO COLOR FIX */
+
+.about-page .page-hero {
+    background: #e8eee5;
+    padding: 75px 25px;
+    text-align: center;
+    border-top: 1px solid #d9e2d5;
+    border-bottom: 1px solid #d9e2d5;
+}
+
+.about-page .page-hero .section-label {
+    color: #718875;
+    letter-spacing: 3px;
+    font-size: 12px;
+    font-weight: 700;
+    margin-bottom: 14px;
+}
+
+.about-page .page-hero h1 {
+    color: #496653;
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 500;
+    margin-bottom: 18px;
+}
+
+.about-page .page-hero p:not(.section-label) {
+    color: #77796f;
+    font-size: 1rem;
+    line-height: 1.9;
+}
+
+/* ABOUT PAGE - THREE VALUES CARDS */
+
+.about-concept {
+    width: min(1180px, 90%);
+    margin: 80px auto;
+    text-align: center;
+}
+
+.about-concept > .section-label {
+    color: #718875;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 14px;
+}
+
+.about-concept > h2 {
+    color: #496653;
+    font-family: Georgia, "Yu Mincho", serif;
+    font-size: clamp(2rem, 4vw, 2.8rem);
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.about-concept-text {
+    max-width: 680px;
+    margin: 0 auto 42px;
+    color: #77796f;
+    line-height: 1.9;
+}
+
+.about-values {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.about-value {
+    padding: 35px 25px;
+    background: #fffdf8;
+    border: 1px solid #e2e8dc;
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(48, 75, 57, 0.06);
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        border-color 0.3s ease;
+}
+
+.about-value:hover {
+    transform: translateY(-6px);
+    border-color: #b9cbb7;
+    box-shadow: 0 15px 32px rgba(48, 75, 57, 0.12);
+}
+
+.about-value h3 {
+    color: #496653;
+    font-family: Georgia, "Yu Mincho", serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 16px;
+}
+
+.about-value p {
+    color: #77796f;
+    font-size: 0.95rem;
+    line-height: 1.9;
+}
+
+/* Tablet and Mobile */
+@media (max-width: 850px) {
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-value {
+        padding: 28px 24px;
+    }
+
+    .about-concept {
+        margin: 60px auto;
+    }
+}
