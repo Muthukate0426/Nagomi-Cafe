@@ -1,1 +1,2558 @@
 
+/* =========================================
+   NAGOMI CAFE - COMPLETE BEAUTIFUL DESIGN
+   Japanese Garden Cafe Color Palette
+   ========================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap');
+
+/* =========================================
+   1. COLORS AND GLOBAL SETTINGS
+   ========================================= */
+
+:root {
+    --cream: #F8F5EF;
+    --cream-dark: #EEE9DF;
+    --soft-white: #FFFDF8;
+    --sage: #A8B5A0;
+    --sage-light: #E9EDE5;
+    --green: #304337;
+    --green-dark: #233D32;
+    --terracotta: #B96F50;
+    --terracotta-light: #D39A7F;
+    --beige: #E7D9BD;
+    --brown: #8B7255;
+    --text: #3F4038;
+    --text-light: #686960;
+    --border: #DED7C9;
+    --shadow: 0 12px 35px rgba(48, 67, 55, 0.10);
+    --shadow-hover: 0 18px 40px rgba(48, 67, 55, 0.16);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    line-height: 1.8;
+    overflow-wrap: break-word;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+    -webkit-tap-highlight-color: transparent;
+}
+
+ul {
+    list-style: none;
+}
+
+button,
+input,
+textarea {
+    font: inherit;
+}
+
+button,
+a {
+    -webkit-tap-highlight-color: transparent;
+}
+
+::selection {
+    background: var(--sage);
+    color: var(--green-dark);
+}
+
+section h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-weight: 500;
+    color: var(--green);
+    line-height: 1.35;
+}
+
+.section-label {
+    color: var(--terracotta);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 16px;
+}
+
+/* =========================================
+   2. HEADER AND NAVIGATION
+   ========================================= */
+
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 100;
+}
+
+.navbar {
+    width: 90%;
+    max-width: 1250px;
+    min-height: 90px;
+    margin: 0 auto;
+    padding: 20px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 25px;
+}
+
+.logo {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.7rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    color: var(--soft-white);
+    white-space: nowrap;
+    transition: color 0.3s ease;
+}
+
+.logo:hover {
+    color: var(--beige);
+}
+
+.navbar ul {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+
+.navbar ul li a {
+    position: relative;
+    display: inline-block;
+    color: var(--soft-white);
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+.navbar ul li a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -7px;
+    width: 0;
+    height: 2px;
+    background: var(--terracotta-light);
+    transition: width 0.3s ease;
+}
+
+.navbar ul li a:hover {
+    color: var(--beige);
+}
+
+.navbar ul li a:hover::after {
+    width: 100%;
+}
+
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6px;
+    width: 44px;
+    height: 44px;
+    padding: 10px;
+    border: 1px solid rgba(255, 253, 248, 0.7);
+    border-radius: 6px;
+    background: rgba(35, 61, 50, 0.25);
+    cursor: pointer;
+}
+
+.menu-toggle span {
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: var(--soft-white);
+}
+
+/* =========================================
+   3. HOME HERO
+   ========================================= */
+
+.hero {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    text-align: center;
+    background:
+        linear-gradient(
+            120deg,
+            rgba(35, 61, 50, 0.78),
+            rgba(48, 67, 55, 0.48),
+            rgba(90, 70, 49, 0.35)
+        ),
+        url("../images/cafe-hero.jpg") center / cover no-repeat;
+}
+
+.hero::after {
+    content: "";
+    position: absolute;
+    inset: 18px;
+    border: 1px solid rgba(248, 245, 239, 0.28);
+    pointer-events: none;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 900px;
+    padding: 140px 25px 80px;
+    color: var(--soft-white);
+    animation: fadeUp 1s ease both;
+}
+
+.hero-subtitle {
+    color: var(--beige);
+    font-size: 13px;
+    letter-spacing: 7px;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(45px, 7vw, 86px);
+    font-weight: 500;
+    line-height: 1.35;
+    letter-spacing: 2px;
+    color: var(--soft-white);
+    margin-bottom: 24px;
+    text-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
+}
+
+.hero-text {
+    color: #F5F0E7;
+    font-size: 14px;
+    letter-spacing: 1.5px;
+    margin-bottom: 38px;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 15px 35px;
+    border: 1px solid var(--beige);
+    border-radius: 3px;
+    background: var(--terracotta);
+    color: var(--soft-white);
+    font-size: 12px;
+    letter-spacing: 2px;
+    transition: all 0.3s ease;
+}
+
+.hero-button:hover {
+    background: var(--soft-white);
+    border-color: var(--soft-white);
+    color: var(--green);
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   4. HOME INTRODUCTION
+   ========================================= */
+
+.intro {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 105px 30px 110px;
+    text-align: center;
+}
+
+.intro::after {
+    content: "❧";
+    display: block;
+    margin-top: 32px;
+    color: var(--terracotta-light);
+    font-size: 32px;
+}
+
+.intro h2 {
+    font-size: clamp(32px, 4vw, 49px);
+    margin-bottom: 25px;
+}
+
+.intro p:not(.section-label) {
+    max-width: 680px;
+    margin: 0 auto 27px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2.1;
+}
+
+.text-link {
+    display: inline-block;
+    padding-bottom: 5px;
+    border-bottom: 1px solid var(--terracotta-light);
+    color: var(--brown);
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.text-link:hover {
+    color: var(--terracotta);
+    border-color: var(--terracotta);
+}
+
+/* =========================================
+   5. HOME CONCEPT
+   ========================================= */
+
+.concept {
+    max-width: 1250px;
+    margin: 0 auto;
+    padding: 85px 35px 100px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 70px;
+    align-items: center;
+}
+
+.concept-image {
+    position: relative;
+    padding: 0 15px 15px 0;
+}
+
+.concept-image::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 72%;
+    height: 75%;
+    border: 2px solid var(--sage);
+    z-index: 0;
+}
+
+.concept-image img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 450px;
+    object-fit: cover;
+    object-position: center;
+    box-shadow: var(--shadow);
+    transition: transform 0.5s ease;
+}
+
+.concept-image:hover img {
+    transform: translateY(-4px);
+}
+
+.concept-content {
+    padding: 20px 0;
+}
+
+.concept-content h2 {
+    font-size: clamp(34px, 4vw, 50px);
+    margin-bottom: 25px;
+}
+
+.concept-content p:not(.section-label) {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 19px;
+}
+
+.concept-content .text-link {
+    margin-top: 8px;
+}
+
+/* =========================================
+   6. HOME MENU PREVIEW
+   ========================================= */
+
+.menu-preview {
+    padding: 100px 30px 105px;
+    background: var(--sage-light);
+    text-align: center;
+}
+
+.menu-preview h2,
+.gallery-preview h2 {
+    font-size: clamp(33px, 4vw, 49px);
+    margin-bottom: 20px;
+}
+
+.menu-intro,
+.gallery-intro {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.menu-cards {
+    max-width: 1180px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 27px;
+    text-align: left;
+}
+
+.menu-card {
+    min-width: 0;
+    overflow: hidden;
+    background: var(--soft-white);
+    border: 1px solid rgba(48, 67, 55, 0.08);
+    border-radius: 5px;
+    box-shadow: 0 8px 24px rgba(48, 67, 55, 0.07);
+    transition: transform 0.35s ease, box-shadow 0.35s ease;
+}
+
+.menu-card:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-hover);
+}
+
+.menu-card-image {
+    height: 255px;
+    overflow: hidden;
+    background: var(--cream-dark);
+}
+
+.menu-card-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+.menu-card:hover .menu-card-image img {
+    transform: scale(1.07);
+}
+
+.menu-card-content {
+    padding: 26px 25px 28px;
+}
+
+.menu-category {
+    color: var(--terracotta);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    margin-bottom: 9px;
+}
+
+.menu-card-content h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 23px;
+    font-weight: 500;
+    line-height: 1.4;
+    color: var(--green);
+    margin-bottom: 12px;
+}
+
+.menu-card-content p:not(.menu-category) {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.9;
+    margin-bottom: 18px;
+}
+
+.price {
+    display: inline-block;
+    color: var(--terracotta);
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.menu-button,
+.gallery-button {
+    display: inline-block;
+    padding: 14px 32px;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    background: var(--green);
+    color: var(--soft-white);
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    transition: all 0.3s ease;
+}
+
+.menu-button:hover,
+.gallery-button:hover {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+    color: white;
+    transform: translateY(-3px);
+}
+
+/* =========================================
+   7. HOME GALLERY PREVIEW
+   ========================================= */
+
+.gallery-preview {
+    padding: 100px 30px 110px;
+    text-align: center;
+    background: var(--cream);
+}
+
+.gallery-grid {
+    max-width: 1150px;
+    margin: 0 auto 45px;
+    display: grid;
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    grid-auto-rows: 190px;
+    gap: 16px;
+}
+
+.gallery-item {
+    position: relative;
+    min-width: 0;
+    overflow: hidden;
+    background: var(--cream-dark);
+    border-radius: 4px;
+}
+
+.gallery-item.gallery-large {
+    grid-column: span 3;
+    grid-row: span 2;
+}
+
+.gallery-item.gallery-wide {
+    grid-column: span 3;
+}
+
+.gallery-item:not(.gallery-large):not(.gallery-wide) {
+    grid-column: span 3;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.9);
+}
+
+/* =========================================
+   8. SHARED PAGE HEROES
+   ========================================= */
+
+.page-hero,
+.gallery-hero,
+.menu-page-hero,
+.access-hero,
+.contact-hero {
+    min-height: 450px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--soft-white);
+}
+
+.page-hero {
+    background-image:
+        linear-gradient(rgba(35, 61, 50, 0.70), rgba(35, 61, 50, 0.58)),
+        url("../images/cafe-concept.jpg");
+}
+
+.gallery-hero {
+    background-image:
+        linear-gradient(rgba(35, 61, 50, 0.68), rgba(35, 61, 50, 0.58)),
+        url("../images/gallery-1.jpg");
+}
+
+.menu-page-hero {
+    background-image:
+        linear-gradient(rgba(35, 61, 50, 0.68), rgba(35, 61, 50, 0.58)),
+        url("../images/americano.jpg");
+}
+
+.access-hero,
+.contact-hero {
+    background-image:
+        linear-gradient(rgba(35, 61, 50, 0.70), rgba(35, 61, 50, 0.58)),
+        url("../images/cafe-concept.jpg");
+}
+
+.page-hero-content,
+.gallery-hero-content,
+.menu-page-hero-content,
+.access-hero-content,
+.contact-hero-content {
+    width: 100%;
+    max-width: 850px;
+    padding: 130px 25px 55px;
+    animation: fadeUp 0.9s ease both;
+}
+
+.page-hero h1,
+.gallery-hero h1,
+.menu-page-hero h1,
+.access-hero h1,
+.contact-hero h1 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(40px, 6vw, 65px);
+    font-weight: 500;
+    line-height: 1.3;
+    color: var(--soft-white);
+    margin-bottom: 20px;
+}
+
+.page-hero-content > p:last-child,
+.gallery-hero-content > p:last-child,
+.menu-page-hero-content > p:last-child,
+.access-hero-content > p:last-child,
+.contact-hero-content > p:last-child {
+    color: #F5F0E7;
+    font-size: 14px;
+    line-height: 2;
+}
+
+.gallery-hero-label,
+.access-hero-label,
+.contact-hero-label {
+    color: var(--beige);
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+.menu-page-hero .section-label {
+    color: var(--beige);
+}
+
+/* =========================================
+   9. ABOUT PAGE
+   ========================================= */
+
+.about-story {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 100px 30px;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px;
+    align-items: center;
+}
+
+.about-story-image {
+    overflow: hidden;
+    background: var(--cream-dark);
+}
+
+.about-story-image img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.about-story-image:hover img {
+    transform: scale(1.05);
+}
+
+.about-story-content h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 24px;
+}
+
+.about-story-content p:not(.section-label) {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+    margin-bottom: 18px;
+}
+
+.about-concept {
+    padding: 95px 30px;
+    background: var(--sage-light);
+    text-align: center;
+}
+
+.about-concept h2 {
+    font-size: clamp(32px, 4vw, 48px);
+    margin-bottom: 22px;
+}
+
+.about-concept-text {
+    max-width: 650px;
+    margin: 0 auto 45px;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-values {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.about-value {
+    padding: 35px 25px;
+    background: var(--soft-white);
+    border-radius: 4px;
+    box-shadow: var(--shadow);
+    transition: transform 0.3s ease;
+}
+
+.about-value:hover {
+    transform: translateY(-6px);
+}
+
+.about-value h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+}
+
+.about-value p {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.about-message,
+.menu-message {
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.about-message {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.about-message h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin-bottom: 25px;
+}
+
+.about-message p:last-child {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.about-link {
+    padding: 65px 20px;
+    text-align: center;
+    background: var(--cream-dark);
+}
+
+/* =========================================
+   10. FULL GALLERY PAGE
+   ========================================= */
+
+.gallery-introduction {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 85px 25px 65px;
+    text-align: center;
+}
+
+.gallery-introduction h2 {
+    font-size: clamp(30px, 4vw, 47px);
+    margin-bottom: 22px;
+}
+
+.gallery-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.full-gallery {
+    padding: 0 30px 100px;
+    background: var(--cream);
+}
+
+.full-gallery-grid {
+    max-width: 1150px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.full-gallery-item {
+    position: relative;
+    width: 100%;
+    min-width: 0;
+    overflow: hidden;
+    aspect-ratio: 4 / 3;
+    background: var(--cream-dark);
+    border-radius: 4px;
+}
+
+.full-gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: transform 0.5s ease, filter 0.4s ease;
+}
+
+.full-gallery-item:hover img {
+    transform: scale(1.06);
+    filter: brightness(0.85);
+}
+
+.gallery-item-large,
+.gallery-item-wide {
+    grid-column: auto;
+    grid-row: auto;
+}
+
+.gallery-caption {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 30px 16px 15px;
+    background: linear-gradient(transparent, rgba(35, 61, 50, 0.85));
+    color: var(--soft-white);
+    opacity: 0;
+    transform: translateY(8px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.full-gallery-item:hover .gallery-caption {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.gallery-caption span {
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+.gallery-back {
+    padding: 70px 20px;
+    background: var(--sage-light);
+    text-align: center;
+}
+
+.gallery-back p {
+    color: var(--text-light);
+    font-size: 14px;
+    margin-bottom: 24px;
+}
+
+.gallery-back-button,
+.access-back-button,
+.contact-back-button {
+    display: inline-block;
+    padding: 13px 30px;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    color: var(--green);
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.gallery-back-button:hover,
+.access-back-button:hover {
+    background: var(--green);
+    color: var(--soft-white);
+}
+
+/* =========================================
+   11. FULL MENU PAGE
+   ========================================= */
+
+.menu-section {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 80px 30px;
+    background: var(--cream);
+}
+
+.menu-section-light {
+    max-width: none;
+    padding-left: max(30px, calc((100% - 1140px) / 2));
+    padding-right: max(30px, calc((100% - 1140px) / 2));
+    background: var(--sage-light);
+}
+
+.menu-section > .section-label {
+    text-align: center;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 4px;
+    margin-bottom: 14px;
+}
+
+.menu-section h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    text-align: center;
+    margin-bottom: 18px;
+}
+
+.menu-section-intro {
+    max-width: 600px;
+    margin: 0 auto 40px;
+    text-align: center;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.menu-list {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.menu-item {
+    display: grid;
+    grid-template-columns: 115px minmax(0, 1fr) auto;
+    align-items: center;
+    gap: 16px;
+    min-width: 0;
+    padding: 17px;
+    background: var(--soft-white);
+    border: 1px solid rgba(48, 67, 55, 0.08);
+    box-shadow: 0 8px 24px rgba(48, 67, 55, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.menu-item:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--shadow);
+}
+
+.menu-item img {
+    width: 115px;
+    height: 115px;
+    object-fit: cover;
+    border-radius: 3px;
+    background: var(--cream-dark);
+}
+
+.menu-item > div {
+    min-width: 0;
+}
+
+.menu-item h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--green);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+    margin-bottom: 7px;
+}
+
+.menu-item p {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.menu-item > span {
+    align-self: start;
+    padding-top: 3px;
+    color: var(--terracotta);
+    font-size: 13px;
+    font-weight: 700;
+    white-space: nowrap;
+}
+
+.menu-message {
+    background: var(--green);
+    color: var(--cream);
+}
+
+.menu-message .section-label {
+    color: var(--beige);
+}
+
+.menu-message h2 {
+    max-width: 850px;
+    margin: 0 auto 22px;
+    color: var(--cream);
+    font-size: clamp(29px, 4vw, 44px);
+}
+
+.menu-message > p:last-child {
+    max-width: 620px;
+    margin: 0 auto;
+    color: #E0E4DD;
+    font-size: 14px;
+    line-height: 2;
+}
+
+/* =========================================
+   12. ACCESS PAGE
+   ========================================= */
+
+.access-introduction,
+.contact-introduction {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 90px 25px 65px;
+    text-align: center;
+}
+
+.access-introduction h2,
+.contact-introduction h2 {
+    font-size: clamp(30px, 4vw, 44px);
+    margin: 15px 0 22px;
+}
+
+.access-description,
+.contact-description {
+    max-width: 650px;
+    margin: 0 auto;
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 2;
+}
+
+.access-information {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    background: var(--cream-dark);
+}
+
+.access-info-content {
+    padding: 65px clamp(25px, 6vw, 85px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.access-info-content h2 {
+    font-size: clamp(29px, 3vw, 40px);
+    margin: 15px 0 30px;
+}
+
+.access-details {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.access-detail h3 {
+    color: var(--green);
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 5px;
+}
+
+.access-detail p {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.8;
+}
+
+.access-map {
+    min-height: 400px;
+    background: var(--cream-dark);
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    overflow: hidden;
+}
+
+.access-map iframe {
+    display: block;
+    width: 100%;
+    height: 510px;
+    border: 0;
+}
+
+.access-map-content {
+    width: 200px;
+    height: 200px;
+    padding: 20px;
+    border-radius: 50%;
+    background: rgba(255, 253, 248, 0.94);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.access-map-content span {
+    color: var(--terracotta);
+    font-size: 11px;
+    letter-spacing: 3px;
+    margin-bottom: 10px;
+}
+
+.access-map-content p {
+    color: var(--green);
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 23px;
+    margin-bottom: 6px;
+}
+
+.access-map-content small {
+    color: var(--text-light);
+    font-size: 11px;
+}
+
+.access-hours {
+    max-width: 750px;
+    margin: 0 auto;
+    padding: 90px 25px;
+    text-align: center;
+}
+
+.access-hours h2 {
+    font-size: clamp(30px, 4vw, 42px);
+    margin: 15px 0 35px;
+}
+
+.hours-list {
+    border-top: 1px solid var(--border);
+}
+
+.hours-row {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    padding: 18px 8px;
+    border-bottom: 1px solid var(--border);
+    font-size: 13px;
+}
+
+.hours-row span:last-child {
+    color: var(--text-light);
+}
+
+.access-back {
+    padding: 65px 20px;
+    text-align: center;
+    background: var(--sage-light);
+}
+
+.access-back p {
+    color: var(--text-light);
+    margin-bottom: 22px;
+}
+
+/* =========================================
+   13. CONTACT PAGE
+   ========================================= */
+
+.contact-information {
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 20px 25px 80px;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    background: var(--cream);
+}
+
+.contact-info-card {
+    padding: 38px 22px;
+    text-align: center;
+    background: var(--soft-white);
+    border: 1px solid var(--border);
+    border-radius: 4px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.contact-info-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow);
+}
+
+.contact-icon {
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.contact-info-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--green);
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.contact-info-card p {
+    color: var(--text-light);
+    font-size: 13px;
+    overflow-wrap: anywhere;
+}
+
+.contact-form-section {
+    padding: 85px 25px;
+    background: var(--sage-light);
+}
+
+.contact-form-content {
+    max-width: 720px;
+    margin: 0 auto;
+}
+
+.contact-form-content > .section-label {
+    color: var(--terracotta);
+    letter-spacing: 4px;
+    font-size: 12px;
+}
+
+.contact-form-content > h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--green);
+    font-size: clamp(30px, 4vw, 44px);
+    font-weight: 500;
+    line-height: 1.4;
+    margin: 15px 0 30px;
+}
+
+.contact-form-content form {
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.form-group label {
+    color: var(--green);
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 14px 16px;
+    border: 1px solid #D8D2C5;
+    border-radius: 3px;
+    background: var(--soft-white);
+    color: var(--green);
+    font-family: inherit;
+    font-size: 14px;
+    transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--terracotta);
+    box-shadow: 0 0 0 3px rgba(185, 111, 80, 0.12);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 140px;
+}
+
+.contact-form-content button {
+    align-self: flex-start;
+    padding: 14px 32px;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    background: var(--green);
+    color: var(--cream);
+    font-size: 13px;
+    letter-spacing: 1px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-form-content button:hover {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+}
+
+.contact-message {
+    padding: 80px 25px;
+    text-align: center;
+    background: var(--green);
+    color: var(--cream);
+}
+
+.contact-message p {
+    color: var(--beige);
+    font-size: 13px;
+    margin-bottom: 12px;
+}
+
+.contact-message h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    color: var(--cream);
+    font-size: clamp(32px, 5vw, 50px);
+    font-weight: 500;
+    margin-bottom: 28px;
+}
+
+.contact-back-button {
+    border-color: var(--beige);
+    color: var(--cream);
+}
+
+.contact-back-button:hover {
+    background: var(--beige);
+    color: var(--green);
+}
+
+/* =========================================
+   14. FOOTER
+   ========================================= */
+
+footer {
+    padding: 28px 20px;
+    background: var(--green-dark);
+    color: #E5E0D5;
+    text-align: center;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* =========================================
+   15. ANIMATIONS
+   ========================================= */
+
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(22px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================================
+   16. TABLET RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 1000px) {
+    .navbar {
+        width: 92%;
+    }
+
+    .navbar ul {
+        gap: 14px;
+    }
+
+    .navbar ul li a {
+        font-size: 11px;
+    }
+
+    .concept,
+    .about-story {
+        gap: 35px;
+    }
+
+    .concept-image img {
+        height: 390px;
+    }
+
+    .menu-cards {
+        gap: 18px;
+    }
+
+    .menu-card-image {
+        height: 220px;
+    }
+
+    .full-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 18px;
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+        max-width: 720px;
+    }
+
+    .menu-section-light {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+
+    .contact-information {
+        gap: 15px;
+    }
+}
+
+/* =========================================
+   17. MOBILE RESPONSIVE DESIGN
+   ========================================= */
+
+@media (max-width: 768px) {
+    .navbar {
+        width: 90%;
+        min-height: 76px;
+        padding: 17px 0;
+        flex-wrap: wrap;
+        gap: 12px;
+    }
+
+    .logo {
+        font-size: 1.4rem;
+    }
+
+    .menu-toggle {
+        display: flex;
+        margin-left: auto;
+    }
+
+    .navbar ul {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        width: 100%;
+        margin: 5px 0 0;
+        padding: 8px 0;
+        background: var(--green-dark);
+        border: 1px solid rgba(231, 217, 189, 0.2);
+        border-radius: 5px;
+    }
+
+    .navbar ul.active {
+        display: flex;
+    }
+
+    .navbar ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    .navbar ul li a {
+        display: block;
+        padding: 12px;
+        font-size: 13px;
+    }
+
+    .navbar ul li a::after {
+        display: none;
+    }
+
+    .hero {
+        min-height: 85vh;
+    }
+
+    .hero::after {
+        inset: 10px;
+    }
+
+    .hero-content {
+        padding: 125px 22px 55px;
+    }
+
+    .hero h1 {
+        font-size: clamp(38px, 9vw, 58px);
+    }
+
+    .hero-subtitle {
+        font-size: 11px;
+        letter-spacing: 4px;
+    }
+
+    .hero-text {
+        font-size: 12px;
+        line-height: 1.9;
+    }
+
+    .intro {
+        padding: 75px 22px 80px;
+    }
+
+    .intro h2,
+    .menu-preview h2,
+    .gallery-preview h2 {
+        font-size: 32px;
+    }
+
+    .concept {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 65px 24px;
+    }
+
+    .concept-image img {
+        height: 320px;
+    }
+
+    .concept-content h2 {
+        font-size: 34px;
+    }
+
+    .menu-preview,
+    .gallery-preview {
+        padding: 70px 20px;
+    }
+
+    .menu-cards {
+        grid-template-columns: 1fr;
+        gap: 24px;
+    }
+
+    .menu-card-image {
+        height: 260px;
+    }
+
+    .menu-card-content {
+        padding: 23px;
+    }
+
+    .gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        grid-auto-rows: 160px;
+        gap: 12px;
+    }
+
+    .gallery-item.gallery-large {
+        grid-column: span 2;
+        grid-row: span 1;
+    }
+
+    .gallery-item.gallery-wide {
+        grid-column: span 2;
+    }
+
+    .gallery-item:not(.gallery-large):not(.gallery-wide) {
+        grid-column: span 1;
+    }
+
+    .page-hero,
+    .gallery-hero,
+    .menu-page-hero,
+    .access-hero,
+    .contact-hero {
+        min-height: 370px;
+    }
+
+    .page-hero-content,
+    .gallery-hero-content,
+    .menu-page-hero-content,
+    .access-hero-content,
+    .contact-hero-content {
+        padding: 125px 20px 45px;
+    }
+
+    .page-hero h1,
+    .gallery-hero h1,
+    .menu-page-hero h1,
+    .access-hero h1,
+    .contact-hero h1 {
+        font-size: clamp(35px, 9vw, 48px);
+    }
+
+    .about-story {
+        grid-template-columns: 1fr;
+        gap: 30px;
+        padding: 70px 22px;
+    }
+
+    .about-story-image img {
+        height: 320px;
+    }
+
+    .about-story-content h2,
+    .about-concept h2 {
+        font-size: 33px;
+    }
+
+    .about-concept {
+        padding: 70px 22px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+        gap: 18px;
+    }
+
+    .about-value {
+        padding: 28px 22px;
+    }
+
+    .about-message {
+        padding: 70px 22px;
+    }
+
+    .about-link {
+        padding: 55px 20px;
+    }
+
+    .gallery-introduction {
+        padding: 70px 22px 45px;
+    }
+
+    .gallery-introduction h2 {
+        font-size: 32px;
+    }
+
+    .full-gallery {
+        padding: 0 20px 70px;
+    }
+
+    .full-gallery-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 13px;
+    }
+
+    .full-gallery-item {
+        aspect-ratio: 4 / 3;
+    }
+
+    .gallery-caption {
+        padding: 25px 10px 10px;
+        opacity: 1;
+        transform: none;
+    }
+
+    .gallery-caption span {
+        font-size: 10px;
+        letter-spacing: 0.5px;
+    }
+
+    .gallery-back {
+        padding: 55px 20px;
+    }
+
+    .menu-section {
+        padding: 65px 20px;
+    }
+
+    .menu-section-light {
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+
+    .menu-section h2 {
+        font-size: 32px;
+    }
+
+    .menu-section-intro {
+        margin-bottom: 30px;
+    }
+
+    .menu-list {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .menu-item {
+        grid-template-columns: 90px minmax(0, 1fr);
+        gap: 13px;
+        padding: 12px;
+    }
+
+    .menu-item img {
+        width: 90px;
+        height: 100px;
+    }
+
+    .menu-item h3 {
+        font-size: 17px;
+    }
+
+    .menu-item > span {
+        grid-column: 2;
+        align-self: auto;
+        justify-self: start;
+        padding-top: 0;
+    }
+
+    .menu-message {
+        padding: 70px 22px;
+    }
+
+    .access-introduction,
+    .contact-introduction {
+        padding: 70px 22px 45px;
+    }
+
+    .access-introduction h2,
+    .contact-introduction h2 {
+        font-size: 32px;
+    }
+
+    .access-information {
+        grid-template-columns: 1fr;
+    }
+
+    .access-info-content {
+        padding: 55px 25px;
+    }
+
+    .access-info-content h2 {
+        font-size: 32px;
+    }
+
+    .access-map {
+        min-height: 320px;
+    }
+
+    .access-hours {
+        padding: 70px 22px;
+    }
+
+    .access-hours h2 {
+        font-size: 32px;
+    }
+
+    .hours-row {
+        font-size: 12px;
+        gap: 12px;
+    }
+
+    .access-back {
+        padding: 55px 20px;
+    }
+
+    .contact-information {
+        grid-template-columns: 1fr;
+        padding: 15px 22px 65px;
+        gap: 15px;
+    }
+
+    .contact-info-card {
+        padding: 30px 20px;
+    }
+
+    .contact-form-section {
+        padding: 65px 22px;
+    }
+
+    .contact-message {
+        padding: 65px 22px;
+    }
+
+    footer {
+        padding: 25px 18px;
+        font-size: 11px;
+        line-height: 1.8;
+    }
+}
+
+/* =========================================
+   18. SMALL MOBILE SCREENS
+   ========================================= */
+
+@media (max-width: 480px) {
+    .hero h1 {
+        font-size: 38px;
+        letter-spacing: 1px;
+    }
+
+    .hero-button,
+    .menu-button,
+    .gallery-button {
+        padding: 13px 23px;
+        font-size: 11px;
+    }
+
+    .concept-image img {
+        height: 260px;
+    }
+
+    .menu-card-image {
+        height: 230px;
+    }
+
+    .gallery-grid {
+        grid-auto-rows: 125px;
+        gap: 9px;
+    }
+
+    .full-gallery-grid {
+        gap: 9px;
+    }
+
+    .full-gallery-item {
+        aspect-ratio: 1 / 1;
+    }
+
+    .gallery-caption span {
+        font-size: 9px;
+    }
+
+    .menu-item {
+        grid-template-columns: 76px minmax(0, 1fr);
+        gap: 10px;
+        padding: 10px;
+    }
+
+    .menu-item img {
+        width: 76px;
+        height: 85px;
+    }
+
+    .menu-item h3 {
+        font-size: 15px;
+    }
+
+    .menu-item p {
+        font-size: 11px;
+    }
+
+    .hours-row {
+        font-size: 11px;
+    }
+}
+
+/* =========================================
+   19. REDUCE ANIMATION WHEN REQUESTED
+   ========================================= */
+
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        scroll-behavior: auto !important;
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* =====================================
+   NAGOMI CAFE - BEAUTIFUL COFFEE HEADER
+   ===================================== */
+
+.navbar {
+    background: linear-gradient(
+    110deg,
+    #304337 0%,
+    #3F5948 50%,
+    #A8B5A0 100%
+);
+    padding: 20px 5%;
+    border-bottom: 3px solid #B98552;
+    box-shadow: 0 5px 18px rgba(50, 30, 20, 0.18);
+}
+
+/* Cafe logo text */
+.navbar .logo {
+    color: #FFFDF8;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.navbar .logo:hover {
+    color: #E9EDE5;
+}
+
+/* Navigation links */
+.navbar ul {
+    gap: 28px;
+}
+
+.navbar ul li a {
+    color: #FFFDF8;
+    font-size: 17px;
+    font-weight: 600;
+    text-decoration: none;
+    padding: 10px 2px;
+    border-bottom: 2px solid transparent;
+    transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+.navbar ul li a:hover,
+.navbar ul li a.active {
+    color: #E9EDE5;
+    border-bottom-color: #A8B5A0;
+}
+
+/* Mobile navigation */
+@media (max-width: 768px) {
+    .navbar {
+        padding: 16px 5%;
+    }
+
+    .navbar .logo {
+        font-size: 24px;
+    }
+
+    .navbar ul {
+        gap: 0;
+    }
+
+    .navbar ul li a {
+        font-size: 16px;
+        padding: 13px 18px;
+    }
+}
+
+
+/* Nagomi Cafe - Full Width Header Fix */
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+header {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+header .navbar {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    border-radius: 0;
+
+    padding: 20px 5%;
+
+background: linear-gradient(
+    110deg,
+    #304337 0%,
+    #3F5948 50%,
+    #A8B5A0 100%
+);
+
+    border-bottom: 3px solid #B98552;
+    box-shadow: 0 5px 18px rgba(50, 30, 20, 0.18);
+}
+
+
+
+/* =================================
+   Nagomi Cafe - Elegant Hero Section
+================================= */
+
+.hero {
+    position: relative;
+    min-height: 350px;
+    padding: 55px 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            ellipse at center,
+            #fffaf0 0%,
+            #f4e4c8 62%,
+            #e8d3b2 100%
+        );
+
+    border-bottom: 2px solid #b98552;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    max-width: 760px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    margin: 0 0 12px;
+    color: #8d5b45;
+    font-size: 15px;
+    letter-spacing: 5px;
+}
+
+.hero h1 {
+    margin: 0 0 16px;
+    color: #4b3029;
+    font-size: clamp(30px, 4vw, 46px);
+    line-height: 1.55;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+.hero-text {
+    margin: 0 0 24px;
+    color: #684637;
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.hero-button {
+    display: inline-block;
+    padding: 12px 27px;
+    background: #4b3029;
+    color: #FFFDF8;
+    border: 1px solid #b98552;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 14px;
+    letter-spacing: 0.5px;
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.hero-button:hover {
+    background: #b98552;
+    color: #ffffff;
+}
+
+/* Decorative botanical branches */
+
+.hero::before,
+.hero::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    width: 25%;
+    height: 190px;
+    transform: translateY(-50%);
+    opacity: 0.5;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hero::before {
+    left: 1%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 170 Q75 125 125 85 T250 15'/%3E%3Cpath d='M48 145 Q28 115 12 120 Q18 145 48 145Z' fill='%2396a17d'/%3E%3Cpath d='M75 125 Q65 90 42 88 Q48 115 75 125Z' fill='%23a8b08c'/%3E%3Cpath d='M103 100 Q105 65 82 52 Q80 80 103 100Z' fill='%2396a17d'/%3E%3Cpath d='M133 79 Q160 80 174 60 Q147 54 133 79Z' fill='%23a8b08c'/%3E%3Cpath d='M175 49 Q180 23 205 18 Q202 42 175 49Z' fill='%2396a17d'/%3E%3Cpath d='M72 135 Q95 148 108 137 Q91 123 72 135Z' fill='%23b8bd9d'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero::after {
+    right: 1%;
+    transform: translateY(-50%) scaleX(-1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 260 190'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 170 Q75 125 125 85 T250 15'/%3E%3Cpath d='M48 145 Q28 115 12 120 Q18 145 48 145Z' fill='%2396a17d'/%3E%3Cpath d='M75 125 Q65 90 42 88 Q48 115 75 125Z' fill='%23a8b08c'/%3E%3Cpath d='M103 100 Q105 65 82 52 Q80 80 103 100Z' fill='%2396a17d'/%3E%3Cpath d='M133 79 Q160 80 174 60 Q147 54 133 79Z' fill='%23a8b08c'/%3E%3Cpath d='M175 49 Q180 23 205 18 Q202 42 175 49Z' fill='%2396a17d'/%3E%3Cpath d='M72 135 Q95 148 108 137 Q91 123 72 135Z' fill='%23b8bd9d'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+@media (max-width: 600px) {
+    .hero {
+        min-height: 300px;
+        padding: 42px 18px;
+    }
+
+    .hero::before,
+    .hero::after {
+        width: 19%;
+        height: 120px;
+        opacity: 0.3;
+    }
+
+    .hero-subtitle {
+        font-size: 12px;
+        letter-spacing: 3px;
+    }
+
+    .hero h1 {
+        font-size: 29px;
+        letter-spacing: 1px;
+    }
+
+    .hero-text {
+        font-size: 13px;
+    }
+
+    .hero-button {
+        padding: 11px 20px;
+    }
+}
+
+
+
+/* =====================================
+   Nagomi Cafe - Hero & Welcome Refinement
+===================================== */
+
+/* Hero section */
+.hero {
+    min-height: 320px;
+    padding: 42px 5%;
+    background:
+        radial-gradient(ellipse at center, #fffaf0 0%, #f4e4c8 65%, #ead4b3 100%);
+    border-bottom: 2px solid #b98552;
+}
+
+/* Keep the text balanced in the center */
+.hero-content {
+    max-width: 680px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    margin-bottom: 8px;
+    font-size: 13px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    margin: 0 0 12px;
+    font-size: clamp(30px, 3.2vw, 40px);
+    line-height: 1.45;
+    letter-spacing: 1px;
+}
+
+.hero-text {
+    margin-bottom: 20px;
+    font-size: 13px;
+}
+
+/* Botanical decorations on BOTH sides */
+.hero::before,
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 29%;
+    height: 220px;
+    transform: translateY(-50%);
+    opacity: 0.65;
+    pointer-events: none;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.hero::before {
+    left: 1%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M8 205 Q95 155 150 105 T390 18'/%3E%3Cpath d='M60 177 Q20 160 18 125 Q55 133 60 177Z' fill='%23a8b08c'/%3E%3Cpath d='M105 148 Q60 120 72 88 Q108 105 105 148Z' fill='%2396a17d'/%3E%3Cpath d='M145 112 Q112 76 132 48 Q158 75 145 112Z' fill='%23b8bd9d'/%3E%3Cpath d='M192 86 Q220 48 252 60 Q230 88 192 86Z' fill='%23a8b08c'/%3E%3Cpath d='M258 56 Q277 24 309 24 Q294 54 258 56Z' fill='%2396a17d'/%3E%3Cpath d='M90 160 Q125 177 148 158 Q120 143 90 160Z' fill='%23b8bd9d'/%3E%3Cpath d='M172 104 Q201 122 224 100 Q198 86 172 104Z' fill='%23a8b08c'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero::after {
+    right: 1%;
+    transform: translateY(-50%) scaleX(-1);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M8 205 Q95 155 150 105 T390 18'/%3E%3Cpath d='M60 177 Q20 160 18 125 Q55 133 60 177Z' fill='%23a8b08c'/%3E%3Cpath d='M105 148 Q60 120 72 88 Q108 105 105 148Z' fill='%2396a17d'/%3E%3Cpath d='M145 112 Q112 76 132 48 Q158 75 145 112Z' fill='%23b8bd9d'/%3E%3Cpath d='M192 86 Q220 48 252 60 Q230 88 192 86Z' fill='%23a8b08c'/%3E%3Cpath d='M258 56 Q277 24 309 24 Q294 54 258 56Z' fill='%2396a17d'/%3E%3Cpath d='M90 160 Q125 177 148 158 Q120 143 90 160Z' fill='%23b8bd9d'/%3E%3Cpath d='M172 104 Q201 122 224 100 Q198 86 172 104Z' fill='%23a8b08c'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+/* Welcome section */
+.intro {
+    padding: 48px 24px 54px;
+    background: #faf7f1;
+    text-align: center;
+}
+
+.intro .section-label {
+    margin: 0 0 12px;
+    color: #a66b43;
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+.intro h2 {
+    margin: 0 0 16px;
+    color: #304337;
+    font-size: clamp(25px, 3vw, 32px);
+    line-height: 1.4;
+}
+
+.intro > p:not(.section-label) {
+    max-width: 620px;
+    margin: 0 auto 18px;
+    color: #66584b;
+    font-size: 14px;
+    line-height: 1.9;
+}
+
+.intro .text-link {
+    color: #795139;
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+    border-bottom: 1px solid #b98552;
+    padding-bottom: 4px;
+}
+
+.intro .text-link:hover {
+    color: #304337;
+    border-color: #304337;
+}
+
+/* Mobile layout */
+@media (max-width: 600px) {
+    .hero {
+        min-height: 290px;
+        padding: 38px 18px;
+    }
+
+    .hero::before,
+    .hero::after {
+        width: 19%;
+        height: 130px;
+        opacity: 0.4;
+    }
+
+    .hero-content {
+        max-width: 78%;
+    }
+
+    .hero h1 {
+        font-size: 27px;
+    }
+
+    .intro {
+        padding: 36px 20px 42px;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .intro > p:not(.section-label) {
+        font-size: 13px;
+    }
+}
+
+
+/* =====================================
+   FINAL FIX - Nagomi Cafe Home Page
+===================================== */
+
+/* Keep the hero compact and balanced */
+.hero {
+    min-height: 400px;
+    height: auto;
+    padding: 35px 5%;
+    background:
+        radial-gradient(
+            ellipse at center,
+            #fffaf0 0%,
+            #f4e4c8 68%,
+            #e8d3b2 100%
+        );
+}
+
+/* Center the text without letting it cover decorations */
+.hero-content {
+    width: 52%;
+    max-width: 620px;
+    padding: 25px 0;
+    margin: 0 auto;
+    z-index: 2;
+    color: #4b3029;
+}
+
+.hero-subtitle {
+    color: #8d5b45;
+    font-size: 13px;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+}
+
+.hero h1 {
+    color: #4b3029;
+    font-size: clamp(30px, 3.2vw, 42px);
+    line-height: 1.5;
+    margin-bottom: 12px;
+    text-shadow: none;
+}
+
+.hero-text {
+    color: #684637;
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.hero-button {
+    background: #4b3029;
+    color: #FFFDF8;
+    padding: 12px 25px;
+    font-size: 12px;
+}
+
+/* Make botanical artwork appear on both sides */
+.hero::before,
+.hero::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    width: 27%;
+    height: 210px;
+    transform: translateY(-50%);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    opacity: 0.7;
+    pointer-events: none;
+    border: none;
+    inset-block: auto;
+}
+
+.hero::before {
+    left: 2%;
+    right: auto;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 205 Q90 165 145 115 T390 15'/%3E%3Cpath d='M55 180 Q15 150 18 125 Q52 140 55 180Z' fill='%23a8b08c'/%3E%3Cpath d='M105 150 Q60 125 72 88 Q108 110 105 150Z' fill='%2396a17d'/%3E%3Cpath d='M145 115 Q115 78 132 48 Q160 78 145 115Z' fill='%23b8bd9d'/%3E%3Cpath d='M190 85 Q220 50 252 60 Q230 88 190 85Z' fill='%23a8b08c'/%3E%3Cpath d='M260 53 Q280 22 310 24 Q295 52 260 53Z' fill='%2396a17d'/%3E%3Cpath d='M90 163 Q122 180 148 158 Q120 143 90 163Z' fill='%23b8bd9d'/%3E%3Cpath d='M175 102 Q205 122 228 98 Q200 84 175 102Z' fill='%23a8b08c'/%3E%3C/g%3E%3C/svg%3E");
+}
+
+.hero::after {
+    left: auto;
+    right: 2%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 220'%3E%3Cg fill='none' stroke='%236b795c' stroke-width='2' stroke-linecap='round'%3E%3Cpath d='M5 205 Q90 165 145 115 T390 15'/%3E%3Cpath d='M55 180 Q15 150 18 125 Q52 140 55 180Z' fill='%23a8b08c'/%3E%3Cpath d='M105 150 Q60 125 72 88 Q108 110 105 150Z' fill='%2396a17d'/%3E%3Cpath d='M145 115 Q115 78 132 48 Q160 78 145 115Z' fill='%23b8bd9d'/%3E%3Cpath d='M190 85 Q220 50 252 60 Q230 88 190 85Z' fill='%23a8b08c'/%3E%3Cpath d='M260 53 Q280 22 310 24 Q295 52 260 53Z' fill='%2396a17d'/%3E%3Cpath d='M90 163 Q122 180 148 158 Q120 143 90 163Z' fill='%23b8bd9d'/%3E%3Cpath d='M175 102 Q205 122 228 98 Q200 84 175 102Z' fill='%23a8b08c'/%3E%3C/g%3E%3C/svg%3E");
+    transform: translateY(-50%) scaleX(-1);
+}
+
+/* Welcome section - smaller text and less empty space */
+.intro {
+    padding: 55px 24px 60px;
+    background: #faf7f1;
+}
+
+.intro .section-label {
+    font-size: 10px;
+    margin-bottom: 10px;
+}
+
+.intro h2 {
+    font-size: clamp(25px, 2.8vw, 34px);
+    margin-bottom: 15px;
+    line-height: 1.4;
+}
+
+.intro p:not(.section-label) {
+    max-width: 600px;
+    margin: 0 auto 18px;
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.intro .text-link {
+    font-size: 13px;
+}
+
+.intro::after {
+    margin-top: 20px;
+    font-size: 26px;
+}
+
+/* Mobile adjustments */
+@media (max-width: 768px) {
+    .hero {
+        min-height: 350px;
+        padding: 30px 12px;
+    }
+
+    .hero-content {
+        width: 68%;
+        padding: 20px 0;
+    }
+
+    .hero::before,
+    .hero::after {
+        width: 19%;
+        height: 135px;
+        opacity: 0.45;
+    }
+
+    .hero h1 {
+        font-size: 28px;
+    }
+
+    .intro {
+        padding: 40px 20px 45px;
+    }
+
+    .intro h2 {
+        font-size: 25px;
+    }
+
+    .intro p:not(.section-label) {
+        font-size: 13px;
+    }
+}
+
+
+
+/* =====================================
+   CONTACT PAGE - LAYOUT FIX
+===================================== */
+
+.contact-introduction {
+    padding: 65px 25px 35px;
+}
+
+.contact-main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 30px 30px 90px;
+    display: grid;
+    grid-template-columns: 0.85fr 1.15fr;
+    gap: 55px;
+    align-items: center;
+}
+
+.contact-information {
+    width: 100%;
+    max-width: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    background: transparent;
+}
+
+.contact-information > .section-label,
+.contact-information > h2,
+.contact-information > .contact-side-description {
+    margin-bottom: 0;
+}
+
+.contact-information h2,
+.contact-form-panel h2 {
+    color: var(--green);
+    font-size: clamp(30px, 3vw, 42px);
+    line-height: 1.35;
+}
+
+.contact-side-description,
+.contact-form-description {
+    color: var(--text-light);
+    font-size: 13px;
+    line-height: 1.9;
+}
+
+.contact-info-card {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    gap: 18px;
+    padding: 18px 20px;
+    text-align: left;
+}
+
+.contact-info-card .contact-icon {
+    margin: 0;
+    color: var(--terracotta);
+}
+
+.contact-info-card h3 {
+    margin-bottom: 4px;
+}
+
+.contact-note {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 18px;
+    background: var(--sage-light);
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.8;
+}
+
+.contact-note p {
+    color: var(--green);
+    font-size: 24px;
+}
+
+.contact-form-panel {
+    width: 100%;
+    padding: 40px;
+    background: var(--soft-white);
+    border: 1px solid var(--border);
+    box-shadow: var(--shadow);
+}
+
+.contact-form-panel h2 {
+    margin: 10px 0 18px;
+}
+
+.contact-form-description {
+    margin-bottom: 25px;
+}
+
+.contact-form-panel form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-form-panel button {
+    align-self: flex-start;
+    padding: 14px 28px;
+    border: 1px solid var(--green);
+    border-radius: 3px;
+    background: var(--green);
+    color: var(--soft-white);
+    cursor: pointer;
+}
+
+.contact-form-panel button:hover {
+    background: var(--terracotta);
+    border-color: var(--terracotta);
+}
+
+@media (max-width: 768px) {
+    .contact-main {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 25px 22px 65px;
+    }
+
+    .contact-form-panel {
+        padding: 25px 20px;
+    }
+}
+
+
+
+/* ACCESS INFORMATION - TEXT SIZE */
+
+.access-information h3,
+.access-info h3 {
+    font-size: 20px;
+}
+
+.access-information p,
+.access-info p {
+    font-size: 17px;
+    line-height: 1.8;
+}
+
